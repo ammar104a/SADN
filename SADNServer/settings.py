@@ -28,8 +28,15 @@ SECRET_KEY = 'django-insecure-4+o*99w^9&ud&yb(cqhf-s_sikx)szlhx6ta-4dj2h-+nun+9i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'sadn-production.up.railway.app',
+    'yourcustomdomain.com',  # Add your custom domain if applicable
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://sadn-production.up.railway.app',  # Add your Railway app domain
+    'https://yourcustomdomain.com',           # Add your custom domain if applicable
+]
 
 # Application definition
 
