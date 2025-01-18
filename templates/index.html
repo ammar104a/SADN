@@ -1,0 +1,1204 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SADN | Strategic, Agile, Dynamic and Now</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
+
+  <!-- Libraries CSS Files -->
+  <link rel="stylesheet" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/animate/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/ionicons/css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/lightbox/css/lightbox.min.css' %}">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+  <!-- ============================================================================================================== -->
+</head>
+
+<body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+
+    <div id="topbar">
+      <div class="container">
+        <div class="social-links">
+          <a href="https://www.youtube.com/@visionaryvault_ai" class="twitter"><i class="fa fa-youtube-play"></i></a>
+          <a href="https://www.instagram.com/sadn.uk/" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/sadn.uk/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/sadn.uk/" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Logo Section -->
+    <div class="logo d-flex align-items-center">
+      <a href="#header" class="scrollto">
+        <img src="{% static 'img/favicon.png' %}" alt="Logo" class="img-fluid me-2" style="max-height: 40px;">
+      </a>
+      <h1 class="text-light m-2">
+        <a href="#intro" class="scrollto"><span>SADN</span></a>
+      </h1>
+    </div>
+
+    <!-- Navigation Menu -->
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+  </div>
+</header>
+
+  <!--==========================
+    Intro Section
+  ============================-->
+<section id="intro" class="clearfix">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline>
+  <source src="{% static 'img/introvideo.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content Overlay -->
+  <div class="container d-flex h-100">
+    <div class="row justify-content-center align-self-center">
+      <div class="col-md-6 intro-info order-md-first order-last">
+        <h2>AI Driven Solutions<br>for Your <span>Business!</span></h2>
+        <div>
+          <!--jddjdjuejduejdujeud-->
+          <a href="#about" class="btn-get-started scrollto">Let's Grow Together!</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 intro-img order-md-last order-first">
+        <!--<img src="img/intro-img.svg" alt="" class="img-fluid">-->
+        <!--<img src="img/apple-touch-icon.png" alt="Rotating Image" class="img-fluid rotating-img">-->
+        <img id="interactive-image" src="{% static 'img/rotate.png' %}" alt="Rotating Image" class="img-fluid rotating-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img">
+              <img src="{% static 'img/about-img.webp' %}" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+              <h2>About Us</h2>
+              <h3>At SADN, we deliver cutting-edge AI solutions, including LLM training, custom chatbots, and AI driven social media management, to help businesses thrive online.</h3>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> AI Driven Social Media Management - Impactful strategies to grow your online presence, boost engagement, and build strong customer connections.</li>
+                <li><i class="ion-android-checkmark-circle"></i> AI-Powered Chatbots - Intelligent chatbots that automate customer interactions and streamline business operations.</li>
+                <li><i class="ion-android-checkmark-circle"></i> SEO-Optimized Website Development - High-performing, user-friendly websites designed to rank at the top and drive conversions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row counters">
+      
+          <div class="col-lg-3 col-6 text-center">
+            <span class="counters" data-toggle="counter-up">4</span>
+            <p class="font-weight-bold text-uppercase">Active Clients</p>
+          </div>
+      
+          <div class="col-lg-3 col-6 text-center">
+            <span class="counters" data-toggle="counter-up">12</span>
+            <p class="font-weight-bold text-uppercase">Projects</p>
+          </div>
+      
+          <div class="col-lg-3 col-6 text-center">
+            <span class="counters" data-toggle="counter-up">1,364</span>
+            <p class="font-weight-bold text-uppercase">Hours of Support</p>
+          </div>
+      
+          <div class="col-lg-3 col-6 text-center">
+            <span class="counters" data-toggle="counter-up">6</span>
+            <p class="font-weight-bold text-uppercase">Hard Workers</p>
+          </div>
+      
+        </div>
+      </div>
+    </section><!-- #about -->
+      
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Our Services</h3>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">AI-Powered Chatbot Integration</a></h4>
+              <p class="description">Seamless customer experiences with custom AI-driven chatbots that automate support, enhance engagement, and streamline business operations.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="">Web Development and Design</a></h4>
+              <p class="description">Stunning yet responsive websites with intuitive designs that are optimized for user experience, SEO, and business growth.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">AI-Enhanced Social Media Management</a></h4>
+              <p class="description">AI-driven strategies for social media management, including user-generated content creation, to boost engagement and grow your online presence.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">Professional Photo and Video Editing</a></h4>
+              <p class="description">Transform your content with high-quality photo and video editing tailored for platforms like YouTube and beyond, ensuring professional-grade visuals.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
+              <h4 class="title"><a href="">Custom AI Integration Solutions</a></h4>
+              <p class="description">Integrate AI technology into your business processes for smarter decision-making, increased efficiency, and innovative solutions tailored to your needs.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+              <h4 class="title"><a href="">Custom Software and eCommerce Development</a></h4>
+              <p class="description">Scalable custom software solutions like CMS platforms or eCommerce websites designed to drive sales and simplify content management.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Our Portfolio</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Social Media Campaigns</li>
+              <li data-filter=".filter-card">Custom Built Websites & Apps </li>
+              <li data-filter=".filter-web">AI Chatbots & Business Integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/sddinsta.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://www.instagram.com/stardustdreams37/">Stardust Dreams</a></h4>
+                <p>Instagram</p>
+                <div>
+                  <a href= "{% static 'img/portfolio/sddinsta.png' %}" data-lightbox="portfolio" data-title="Stardust Dreams Jewellery" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://www.instagram.com/stardustdreams37/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 3</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/dabinsta.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://www.instagram.com/dabautoconcept/">Dabautoconcept</a></h4>
+                <p>Instagram</p>
+                <div>
+                  <a href="{% static 'img/portfolio/dabinsta.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Dabautoconcept" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://www.instagram.com/dabautoconcept/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/card2.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://www.opulent-elite.com">Exclusive B2B Market</a></h4>
+                <p>Opulent International</p>
+                <div>
+                  <a href="{% static 'img/portfolio/card2.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Exclusive B2B Market" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://www.opulent-elite.com" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 2</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/sportoinsta.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://www.instagram.com/sporto.club/">Sporto Club</a></h4>
+                <p>Instagram</p>
+                <div>
+                  <a href="{% static 'img/portfolio/sportoinsta.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Sporto Club" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://www.instagram.com/sporto.club/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/card1.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://vle.tmuc.edu.pk/login/index.php">UniTrix - Student Centre</a></h4>
+                <p>TMUC</p>
+                <div>
+                  <a href="{% static 'img/portfolio/card1.png' %}" class="link-preview" data-lightbox="portfolio" data-title="UniTrix - Student Centre" title="UniTrix - Student Centre"><i class="ion ion-eye"></i></a>
+                  <a href="https://vle.tmuc.edu.pk/login/index.php" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/Screenshot%202024-12-06%20at%209.34.30%20PM.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://www.paklap.pk/">E Commerce - Laptops</a></h4>
+                <p>PakLap</p>
+                <div>
+                  <a href="{% static 'img/portfolio/Screenshot%202024-12-06%20at%209.34.30%20PM.png' %}" class="link-preview" data-lightbox="portfolio" data-title="E Commerce - Laptops" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://www.paklap.pk/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/card3.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://starddreams.com">Jewellery Store</a></h4>
+                <p>Stardust Dreams Jewellery</p>
+                <div>
+                  <a href="{% static 'img/portfolio/card3.png' %}" class="link-preview" data-lightbox="portfolio" data-title="E Commerce - Jewellery Store" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://starddreams.com" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/Screenshot%202024-12-06%20at%209.49.11%20PM.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://www.ptn.com.pk/">Transport Tracking</a></h4>
+                <p>Pakistan Transport Network</p>
+                <div>
+                  <a href="{% static 'img/portfolio/Screenshot%202024-12-06%20at%209.49.11%20PM.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Transport Tracking System" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://www.ptn.com.pk/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/Screenshot%202024-12-06%20at%209.56.56%20PM.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://www.instagram.com/sporto.club/">Business Management</a></h4>
+                <p>Sporto Club - Indoor Cricket</p>
+                <div>
+                  <a href="{% static 'img/portfolio/Screenshot%202024-12-06%20at%209.56.56%20PM.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Business Management" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://www.instagram.com/sporto.club/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/Screenshot%202024-12-06%20at%2010.06.09%20PM.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="https://www.universal-exporters.com/#">Business Portfolio</a></h4>
+                <p>UNIEX</p>
+                <div>
+                  <a href="{% static 'img/portfolio/Screenshot%202024-12-06%20at%2010.06.09%20PM.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Business Portfolio Website" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="https://www.universal-exporters.com/#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+              <div class="portfolio-wrap">
+                <img src="{% static 'img/portfolio/UEEXPORTS.png' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4><a href="https://ueexportspk.com/textile-export/">Business Portfolio</a></h4>
+                  <p>UE Exports</p>
+                  <div>
+                    <a href="{% static 'img/portfolio/UEEXPORTS.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Business Portfolio Website" title="Preview"><i class="ion ion-eye"></i></a>
+                    <a href="https://ueexportspk.com/textile-export/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/ChatAI.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Appointment ChatBot</a></h4>
+                <p>
+                  Integrated Into Restaurant Websites
+                </p>
+                <div>
+                  <a href="{% static 'img/portfolio/ChatAI.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Restaurant Appointment ChatBot" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="testimonials">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Testimonials</h3>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="owl-carousel testimonials-carousel wow fadeInUp">
+    
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonial-1.jpeg' %}" class="testimonial-img" alt="">
+                <h3>Opulent International</h3>
+                <h4>Textile Exporter</h4>
+                <p>
+                Collaborating with sadn was a seamless and rewarding experience. They helped us transform our business with a custom b2b market that showcased our premium textiles to a global audience.                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src=".{% static 'img/testimonial-2.svg' %}" class="testimonial-img" alt="">
+                <h3>Stardust Dreams Jewellery</h3>
+                <h4>Handmade Jewellery</h4>
+                <p>
+                Working with the people at sadn was an exciting journey for us as together we crafted a digital solution that truly reflected our artistry and craftsmanship. Through a custom eCommerce platform, we showcased our stunning handmade jewellery to a wider market.</p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonial-3.png' %}" class="testimonial-img" alt="">
+                <h3>DABAutoConcept</h3>
+                <h4>Auto Detailing</h4>
+                <p>
+                  Their attention to quality and detail in their services was reflected in the sleek, user-friendly platform we designed. The collaboration was a perfect match, resulting in a digital experience as polished as the cars we work on.
+                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonial-4.jpeg' %}" class="testimonial-img" alt="">
+                <h3>Universal Enterprises</h3>
+                <h4>Importer & Exporter</h4>
+                <p>
+                  Partnering with sadn was a transformative experience for Universal Enterprises. As a global importer and exporter, we needed a digital solution that could effectively showcase our diverse portfolio and streamline operations for our clients worldwide.                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section><!-- #testimonials -->
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3>The Minds Behind the Mission</h3>
+          <p>Our team is more than a collection of professionals – we are a family of innovators, collaborators, and dreamers, committed to bringing your vision to life with passion and expertise</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="{% static 'img/sheikhadeen.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>A.Sheikh</h4>
+                  <span>Product Manager</span>
+                  <div class="social">
+                    <a href="https://youtube.com/@visionaryvault_ai"><i class="fa fa-youtube-play"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <!--<a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="{% static 'img/ammarahmad.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>A.Ahmad</h4>
+                  <span>Project Manager</span>
+                  <div class="social">
+                    <a href="https://youtube.com/@visionaryvault_ai"><i class="fa fa-youtube-play"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <!--<a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="{% static 'img/team-3.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>A.Bashir</h4>
+                  <span>Business Intelligence Analyst</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-youtube-play"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <!--<a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="{% static 'img/team-4.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>H.Sheikh</h4>
+                  <span>Client Experience Director</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-youtube-play"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <!--<a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Our Clients</h3>
+          <p>They aren’t just clients to us – they are partners in our journey, and each collaboration reflects a shared vision, trust, and the personal connections we deeply value.</p>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <img src="{% static 'img/testimonial-1.jpeg' %}" alt="">
+          <img src="{% static 'img/testimonial-2.svg' %}" alt="">
+          <img src="{% static 'img/testimonial-3.png' %}" alt="">
+          <img src="{% static 'img/testimonial-4.jpeg' %}" alt="">
+          <img src="{% static 'img/testimonial-5.png' %}" alt="">
+          <img src="{% static 'img/testimonial-6.png' %}" alt="">
+          <img src="{% static 'img/testimonial-7.png' %}" alt="">
+          <img src="{% static 'img/testimonial-8.webp' %}" alt="">
+        </div>
+
+      </div>
+    </section><!-- #clients -->
+
+
+    <!--==========================
+      Pricing Section
+    ============================-->
+    <section id="pricing" class="wow fadeInUp section-bg">
+
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Pricing</h3>
+          <p>Please note that all prices are indicative and subject to a final quote provided after a consultation.</p>
+        </header>
+            <!-- Added Pricing Toggle Buttons -->
+      <div class="radio-toolbar-3">
+        <input type="radio" id="monthly" name="subscription-type" value="monthly" checked>
+        <label for="monthly" onclick="togglePricing('monthly')">Monthly</label>
+
+        <input type="radio" id="annual" name="subscription-type" value="annual">
+        <label for="annual" onclick="togglePricing('annual')">Yearly</label>
+      </div>
+
+        <div class="row flex-items-xs-middle flex-items-xs-center">
+
+          <!-- Basic Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3>
+                  <span class="currency">$</span>
+                  <span class="price" data-monthly="299" data-annual="249">249</span>
+                  <span class="period">/month</span>
+                </h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  Basic
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Website Development: Business Portfolio Website.</li>
+                  <li class="list-group-item">Social Media Management: 10 posts/month on all platforms.</li>
+                  <li class="list-group-item">Content Calendar: Monthly calendar with basic scheduling recommendations.</li>
+                  <li class="list-group-item">Search Engine Optimization & Indexing</li>
+                  <li class="list-group-item">Monthly Reporting: Basic analytics report.</li>
+                  <li class="list-group-item">Customer Reviews Assistance: Collection and management setup for reviews.</li>
+
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regular Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3>
+                  <span class="currency">$</span>
+                  <span class="price" data-monthly="799" data-annual="599">599</span>
+                  <span class="period">/month</span>
+                </h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  Rapid Growth
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Website Development: Custom website, Online Store with Basic AI Chatbot Integration</li>
+                  <li class="list-group-item">Social Media Management: 15 posts/month across all platforms.</li>
+                  <li class="list-group-item">3 User Generated Content Videos - Youtube</li>
+                  <li class="list-group-item">Content Calendar: Comprehensive Calendar with Posting Times and Campaign Strategies.</li>
+                  <li class="list-group-item">Advanced Search Engine Optimization & Indexing</li>
+                  <li class="list-group-item">Monthly Reporting: Detailed analytics with actionable insights.</li>
+                  <li class="list-group-item">Custom Software: Local Software for Stores Synced With Online Platform.</li>
+                  <li class="list-group-item">Advanced Online Reputation Management & Lead Generation</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3>
+                  <span class="currency">$</span>
+                  <span class="price" data-monthly="1499" data-annual="1199">1199</span>
+                  <span class="period">/month</span>
+                </h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  Enterprise
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Website Development: Fully custom, scalable websites (unlimited pages, ecommerce integrations, API setups).</li>
+                  <li class="list-group-item">Social Media Management: 25 posts/month across multiple platforms.</li>
+                  <li class="list-group-item">5 User Generated Content Videos - Youtube</li>
+                  <li class="list-group-item">Content Calendar: Fully tailored strategy, including seasonal campaigns.</li>
+                  <li class="list-group-item">Enterprise Search Engine Optimization & Indexing. International SEO, Schema Markups and Backlinks</li>
+                  <li class="list-group-item">Monthly Performance Analysis & Reporting: Indepth performance metrics and consultation.</li>
+                  <li class="list-group-item">Custom Software Development and Synergy: Fully tailored software solutions with LLM AI capabilities.</li>
+                  <li class="list-group-item">In-Store AI Chatbot Integration.</li>
+                  <li class="list-group-item">5 AI Calling Agents: Setup and integration (additional $2499 setup fee if required).</li>
+                  <li class="list-group-item">Enterprise Grade International Online Reputation Management.</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- #pricing -->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const monthlyBtn = document.getElementById('monthly');
+  const annualBtn = document.getElementById('annual');
+  const prices = document.querySelectorAll('.price');
+  const periods = document.querySelectorAll('.period');
+
+  // Function to update pricing and styles
+  const updatePricing = (type) => {
+    if (type === 'monthly') {
+      prices.forEach(price => {
+        price.textContent = price.getAttribute('data-monthly');
+      });
+      periods.forEach(period => {
+        period.textContent = '/month';
+      });
+    } else if (type === 'annual') {
+      prices.forEach(price => {
+        price.textContent = price.getAttribute('data-annual');
+      });
+      periods.forEach(period => {
+        period.textContent = '/month';
+      });
+    }
+  };
+
+  // Event listener for Monthly button
+  monthlyBtn.addEventListener('change', () => {
+    if (monthlyBtn.checked) {
+      updatePricing('monthly');
+    }
+  });
+
+  // Event listener for Annual button
+  annualBtn.addEventListener('change', () => {
+    if (annualBtn.checked) {
+      updatePricing('annual');
+    }
+  });
+});
+  </script>
+
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq">
+      <div class="container">
+        <header class="section-header">
+          <h3>Frequently Asked Questions</h3>
+        </header>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">What services does SADN provide? <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+            SADN specializes in web development, mobile app development, digital marketing, graphic design, branding, and eCommerce solutions to help businesses grow and thrive online.       </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Can you create a custom website for my business?<i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Yes! We design and develop fully customized websites tailored to your business needs, ensuring functionality, responsiveness, and a professional design.              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">What industries do you work with? <i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                We work with businesses across various industries, including retail, healthcare, manufacturing, education, and more. Our solutions are adaptable to meet unique industry requirements.              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">How long does it take to complete a project?<i class="ion-android-remove"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                The timeline depends on the scope and complexity of the project. Typically, a website can take 4-8 weeks, while other services may vary. We'll provide a clear timeline after understanding your requirements.              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">Do you provide ongoing support after project completion?<i class="ion-android-remove"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                Yes, we offer ongoing maintenance and support for all our services, including updates, troubleshooting, and performance optimization              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed">How can I get started with SADN?<i class="ion-android-remove"></i></a>
+            <div id="faq6" class="collapse" data-parent="#faq-list">
+              <p>
+                Getting started is easy! Contact us through our website or email, and we’ll schedule a consultation to discuss your project and create a personalized plan.              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- #faq -->
+
+<!-- chat open -->
+    <div class="chat-bar-open" id="chat-open">
+      <button
+        id="chat-open-button"
+        type="button"
+        class="collapsible close"
+        onclick="chatOpen()"
+      >
+        <img src="{% static 'img/bot.png' %}" alt="Sparrow Bird image" />
+      </button>
+    </div>
+
+    <!-- chat close -->
+    <div class="chat-bar-close" id="chat-close">
+      <button
+        id="chat-close-button"
+        type="button"
+        class="collapsible close"
+        onclick="chatClose()"
+      >
+        <i class="material-icons-outlined"> close </i>
+      </button>
+    </div>
+
+    <!-- chat-window 1 -->
+    <div class="chat-window" id="chat-window1">
+  <div class="hi-there">
+    <p class="p1">Welcome to SADN Chat!</p>
+    <br />
+    <p class="p2">Start a Conversation, our team will be with you shortly!<br /></p>
+  </div>
+  <div class="start-conversation">
+    <button
+      class="new-conversation"
+      type="button"
+      onclick="openConversation()"
+    >
+      <span>New Conversation</span>
+      <i class="material-icons-outlined">send</i>
+    </button>
+  </div>
+</div>
+<!-- chat chat-window 2 -->
+<div class="chat-window2" id="chat-window2">
+  <div class="message-box" id="messageBox">
+    <div class="hi-there">
+      <p class="p1">Welcome to SADN Chat!</p>
+      <br />
+      <p class="p2">Our team will be with you shortly!</p>
+    </div>
+    <div class="first-chat">
+      <p>Is there any offline versions available for Maxeon Player?</p>
+      <div class="arrow"></div>
+    </div>
+    <div class="second-chat">
+      <div class="circle"><img src="{% static 'img/favicon.png' %}" alt="Circle Image" /></div>
+      <p>Currently we don't have but we will launch soon.</p>
+      <div class="arrow"></div>
+    </div>
+  </div>
+  <div class="input-box">
+    <div class="surveysparrow">
+    </div>
+    <div class="write-reply">
+      <input
+        class="inputText"
+        type="text"
+        id="textInput"
+        placeholder="Write a reply..."
+      />
+    </div>
+    <div class="send-button">
+      <button
+        type="submit"
+        class="send-message"
+        id="send"
+        onclick="userResponse()"
+      >
+        <i class="material-icons-outlined">send</i>
+      </button>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+
+                <div class="col-sm-6">
+
+                  <div class="footer-info">
+                    <h3>SADN</h3>
+                    <p>SADN.uk specializes in delivering innovative digital solutions, including custom web design, app development, digital marketing, branding, and eCommerce services. We empower businesses across industries with creative strategies, cutting-edge technology, and ongoing support to achieve their goals and stand out online.</p>
+                  </div>
+                  <div class="footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p>Stay updated with the latest insights, trends, and exclusive offers! Sign up for our newsletter and never miss out.</p>
+                    <form id="subscribe-form" method="post">
+                        <label>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </label><input type="submit" value="Subscribe">
+                    </form>
+                    <!--<div id="success-message" style="display: none; color: green; font-weight: bold;">Subscription successful. Thank you!</div>
+                    <div id="error-message" style="display: none; color: red; font-weight: bold;">An error occurred. Please try again.</div>-->
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><a href="#header">Home</a></li>
+                      <li><a href="#about">About us</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="https://policies.google.com/terms?hl=en-US$0">Terms of service</a></li>
+                      <li><a href="https://policies.google.com/privacy?hl=en-US$0">Privacy policy</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <p>
+                      United Kingdom <br>
+                      Pakistan <br>
+                      United States <br>
+                      <strong>Phone:</strong> +1 647 457 8328<br>
+                      <strong>Email:</strong> info@sadn.uk<br>
+                    </p>
+                  </div>
+
+                  <div class="social-links">
+                    <a href="https://youtube.com/@visionaryvault_ai" class="Youtube"><i class="fa fa-youtube-play"></i></a>
+                    <a href="https://www.instagram.com/sadn.uk/" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sadn.uk/" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/sadn.uk/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                  </div>
+
+                </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+              <div class="form">
+                  <h4>We’re just a message away!</h4>
+                  <p>Looking for a way to grow your business? Whether you have a question, a suggestion, or just want to say hello, we’re here for you.</p>
+                  <form id="contactForm">
+                      <div class="form-group">
+                          <label for="name"></label><input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                      </div>
+                      <div class="form-group">
+                          <label for="email"></label><input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                      </div>
+                      <div class="form-group">
+                          <label for="subject"></label><input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+                      </div>
+                      <div class="form-group">
+                          <label for="message"></label><textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                      </div>
+                      <div id="success-message" style="display: none; color: green;">Message received, congratulations on taking the first step! We are on it and will respond to you promptly. Thank you for getting in touch!</div>
+                      <div id="error-message" style="display: none; color: red;">An error occurred and We Apologize. Please Contact Us at info@sadn.uk</div>
+                      <div class="text-center">
+                          <button type="submit" id="sendMessageButton" title="Send Message">Send Message</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; 2024, <strong>The Visionary Vault</strong>. All Rights Reserved.
+      </div>
+      <div class="credits">
+
+        Designed by <a href="https://sadn.uk/"> sadn.uk</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/mobile-nav/mobile-nav.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+  <script src="{% static 'js/chat.js' %}"></script>
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js' %}"></script>  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'contactform/contactform.js' %}"></script>
+
+ <script>
+  const image = document.getElementById('interactive-image');
+  let isDragging = false;
+  let rotation = 0; // Current rotation in degrees
+  let startX; // Start position of the drag
+  let velocity = 0; // Speed of the rotation
+  let momentum; // Momentum effect interval
+  let isInteracted = false; // Tracks if the user interacted
+
+  // Disable default rotation on interaction
+  function disableDefaultRotation() {
+    image.style.animation = 'none';
+    isInteracted = true;
+  }
+
+  // Re-enable default rotation after interaction ends
+  function enableDefaultRotation() {
+    if (!isInteracted) return;
+    isInteracted = false;
+    clearInterval(momentum);
+    image.style.animation = 'rotate 10s linear infinite';
+  }
+
+  // Disable scrolling
+  function disableScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Enable scrolling
+  function enableScroll() {
+    document.body.style.overflow = '';
+  }
+
+  // For mouse events
+  image.addEventListener('mousedown', (e) => {
+    e.preventDefault(); // Prevent default drag behavior
+    disableDefaultRotation();
+    disableScroll();
+    isDragging = true;
+    startX = e.clientX;
+    velocity = 0; // Reset velocity
+    image.style.cursor = 'grabbing';
+    clearInterval(momentum); // Stop any ongoing momentum
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      const currentX = e.clientX;
+      const deltaX = currentX - startX;
+      velocity = deltaX * 0.9; // Update velocity (adjust sensitivity)
+      rotation -= velocity;
+      image.style.transform = `rotate(${rotation}deg)`;
+      startX = currentX; // Update start position
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (isDragging) {
+      isDragging = false;
+      enableScroll();
+      image.style.cursor = 'grab';
+      applyMomentum(); // Apply momentum effect
+    }
+  });
+
+  // For touch events
+  image.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevent default touch behavior
+    disableDefaultRotation();
+    disableScroll();
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    velocity = 0; // Reset velocity
+    clearInterval(momentum); // Stop any ongoing momentum
+  });
+
+  document.addEventListener('touchmove', (e) => {
+    if (isDragging) {
+      const currentX = e.touches[0].clientX;
+      const deltaX = currentX - startX;
+      velocity = deltaX * 0.9; // Update velocity (adjust sensitivity)
+      rotation += velocity;
+      image.style.transform = `rotate(${rotation}deg)`;
+      startX = currentX; // Update start position
+    }
+  });
+
+  document.addEventListener('touchend', () => {
+    if (isDragging) {
+      isDragging = false;
+      enableScroll();
+      applyMomentum(); // Apply momentum effect
+    }
+  });
+
+  function applyMomentum() {
+    momentum = setInterval(() => {
+      rotation += velocity; // Continue rotation
+      velocity *= 0.95; // Apply friction (reduce velocity)
+      image.style.transform = `rotate(${rotation}deg)`;
+      if (Math.abs(velocity) < 0.1) {
+        clearInterval(momentum); // Stop momentum when velocity is minimal
+        enableDefaultRotation(); // Re-enable default rotation
+      }
+    }, 16); // Approximately 60 frames per second
+  }
+</script>
+
+<script>
+  // Find the About Us image
+  const aboutImage = document.querySelector('.about-img img');
+
+  // Define both image paths via Django's static tag
+  const firstImage = "{% static 'img/about-img.webp' %}";
+  const secondImage = "{% static 'img/about-img-2.webp' %}";
+
+  // How often (ms) to switch images
+  const switchInterval = 3000;
+  // Track which image is showing
+  let isOriginal = true;
+
+  // Optional: start in the "fade-in" state for a smooth initial appearance
+  aboutImage.classList.add('fade-in');
+
+  setInterval(() => {
+    // 1. Fade out the current image
+    aboutImage.classList.remove('fade-in');
+    aboutImage.classList.add('fade-out');
+
+    // 2. Once fade-out completes (0.5s), switch the src and fade in
+    setTimeout(() => {
+      aboutImage.src = isOriginal ? secondImage : firstImage;
+      isOriginal = !isOriginal;
+
+      // Remove fade-out, re-add fade-in
+      aboutImage.classList.remove('fade-out');
+      aboutImage.classList.add('fade-in');
+    }, 500); // matches the transition time in your CSS
+  }, switchInterval);
+</script>
+
+</body>
+</html>

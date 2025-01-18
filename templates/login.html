@@ -1,0 +1,194 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SADN | Login</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
+
+  <!-- Libraries CSS Files -->
+  <link rel="stylesheet" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/animate/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/ionicons/css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/lightbox/css/lightbox.min.css' %}">
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"
+  />
+
+  <!-- Main Stylesheet File (Your entire CSS above) -->
+  <!-- Ensure this references the same file or code you showed in the question. -->
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header (Same as your main site)
+  ============================-->
+  <header id="header">
+
+    <div id="topbar">
+      <div class="container">
+      </div>
+    </div>
+
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Logo Section -->
+      <div class="logo d-flex align-items-center">
+        <a href="#header" class="scrollto">
+          <img src="{% static 'img/favicon.png' %}" alt="Logo" class="img-fluid me-2" style="max-height: 40px;">
+        </a>
+        <h1 class="text-light m-2">
+          <a href="#intro" class="scrollto"><span>SADN</span></a>
+        </h1>
+      </div>
+      <!-- Navigation Menu -->
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <!-- The active class on the Login link -->
+          <li class="active"><a href="{% url 'login' %}">Login</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+    </div>
+  </header>
+  <!-- #header -->
+
+  <!--==========================
+    Main content for the Login Page
+  ============================-->
+  <main id="main" class="main-pages">
+
+    <!-- Optional: You can add a nice background or heading here -->
+    <section class="container" style="padding: 120px 0 60px 0;">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+
+          <!-- Login Card/Panel -->
+          <div class="card shadow-sm p-4">
+            <h3 class="text-center mb-4">Welcome Back!</h3>
+
+            <!-- Example Django login form -->
+            <!-- If using Django's built-in authentication with a Form -->
+            <form method="POST" action="{% url 'login' %}">
+              {% csrf_token %}
+              <!-- If using Django form:
+              {{ form.non_field_errors }}
+              <div class="form-group mb-3">
+                  <label for="id_username">Username</label>
+                  {{ form.username }}
+              </div>
+              <div class="form-group mb-3">
+                  <label for="id_password">Password</label>
+                  {{ form.password }}
+              </div>
+              -->
+              <!-- Otherwise, custom fields: -->
+              <div class="form-group mb-3">
+                <label for="username" class="form-label">Username or Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  required
+                  placeholder="Enter your username"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Enter your password"
+                />
+              </div>
+
+              <!-- If you have messages or errors (like invalid login), show them here -->
+              {% if messages %}
+                <div class="mb-3 text-danger">
+                  {% for message in messages %}
+                    <p>{{ message }}</p>
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              <button type="submit" class="btn btn-primary w-100 mt-3">
+                Login
+              </button>
+
+              <div class="text-center mt-3">
+                <p class="mb-1">
+                  <a href="#">Forgot Password?</a>
+                </p>
+                <p>
+                </p>
+              </div>
+            </form>
+          </div><!-- End Card -->
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- #main -->
+
+  <!--==========================
+    Footer (Same as your main site)
+  ============================-->
+  <footer id="footer" class="section-bg">
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; 2024, <strong>The Visionary Vault</strong>. All Rights Reserved.
+      </div>
+      <div class="credits">
+        Designed by <a href="https://sadn.uk/"> sadn.uk</a>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!--==========================
+    JavaScript Libraries
+  ============================-->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/mobile-nav/mobile-nav.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+  <script src="{% static 'js/chat.js' %}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'contactform/contactform.js' %}"></script>
+
+</body>
+</html>
