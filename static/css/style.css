@@ -10,7 +10,14 @@
 --------------------------------------------------------------*/
 
 
+.typing-indicator p {
+  color: #666;
+  font-style: italic;
+}
 
+.second-chat.error p {
+  color: #dc3545;
+}
 
 
 

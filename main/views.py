@@ -1,4 +1,5 @@
 #views.py
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
@@ -89,37 +90,34 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Company
 
+
 @login_required
 def dialer_view(request, company_id=None):
     user = request.user
     profile = user.userprofile
 
     if company_id:
-        # The user might have navigated to /dialer/<company_id>/
         company = get_object_or_404(Company, id=company_id)
-        # Update the user's last_company to this new one
         profile.daily_progress += 1
         profile.last_company = company
         profile.save()
     else:
-        # If no company_id in URL, try to resume from last_company
         if profile.last_company:
             company = profile.last_company
         else:
-            # If user has no last_company, fallback to the first
             company = Company.objects.first()
+
+    # Add this section to handle phone number formatting
+    phone_number = company.phone_number.strip() if company.phone_number else None
+    tel_url = f"tel:{phone_number}" if phone_number else None
+
     difference = request.user.userprofile.total_calls - request.user.userprofile.yesterday_calls
-    # Figure out the next_company to display a "Next" button in template
-    next_company = None
-    prev_company = None
-    if company:
-        next_company = Company.objects.filter(id__gt=company.id).order_by('id').first()
-        prev_company = Company.objects.filter(id__lt=company.id).order_by('-id').first()
+    next_company = Company.objects.filter(id__gt=company.id).order_by('id').first()
+    prev_company = Company.objects.filter(id__lt=company.id).order_by('-id').first()
+
     profile = request.user.userprofile
     initial_work_seconds = profile.total_work_seconds
 
-    # If the user is actively in session, figure out how many seconds
-    # they’ve already racked up in this session so far.
     session_elapsed_seconds = 0
     if profile.session_start:
         delta = timezone.now() - profile.session_start
@@ -132,9 +130,9 @@ def dialer_view(request, company_id=None):
         'next_company': next_company,
         'prev_company': prev_company,
         'difference': difference,
-        "initial_work_seconds": initial_work_seconds,
-        "session_elapsed_seconds": session_elapsed_seconds,
-
+        'initial_work_seconds': initial_work_seconds,
+        'session_elapsed_seconds': session_elapsed_seconds,
+        'tel_url': tel_url  # Add tel_url to the context
     }
     return render(request, 'dialer.html', context)
 
@@ -249,19 +247,98 @@ def add_company_comment(request, company_id):
 
     # If someone hits this URL via GET, redirect them back
     return redirect('dialer_view', company_id=company_id)
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 
 @login_required
-def start_call_view(request, company_id):
-    profile = request.user.userprofile
-    # Possibly reset daily stats if a new day
-    profile.check_and_reset_daily_stats()
-    # Retrieve the company from the DB:
+def start_call(request, company_id):
+    """Handle call initiation and send Discord notification"""
     company = get_object_or_404(Company, id=company_id)
-    send_discord_notification(f"{request.user.username} started a call with {company.name}!")
-    # Increment total calls
-    profile.total_calls += 1
-    profile.save()
+    user = request.user
 
-    # Redirect to the dialer/company detail
-    return redirect('dialer_view', company_id=company_id)
+    # Format phone number and create tel URL
+    phone_number = company.phone_number.strip() if company.phone_number else None
+    tel_url = f"tel:{phone_number}" if phone_number else None
+
+    if phone_number:
+        # Send Discord notification
+        current_time = timezone.now().strftime('%Y-%m-%d %H:%M:%S')
+        send_discord_notification(
+            f"📞 {user.username} started a call with {company.name} at {current_time}!"
+        )
+
+        return JsonResponse({
+            'status': 'success',
+            'tel_url': tel_url
+        })
+
+    return JsonResponse({
+        'status': 'error',
+        'message': 'No phone number available'
+    })
+
+
+# views.py
+from django.http import JsonResponse
+import requests
+from django.views.decorators.csrf import csrf_exempt
+import json
+
+
+@csrf_exempt
+def llama_chat(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            user_message = data.get('message', '')
+
+            # Make request to Ollamas
+            response = requests.post('http://localhost:11434/api/chat',
+                                     json={
+                                         "model": "llama3.2",
+                                         "messages": [{"role": "user", "content": user_message}],
+                                         "stream": False
+                                     })
+
+            if response.status_code != 200:
+                return JsonResponse({
+                    'status': 'error',
+                    'message': 'Error communicating with LLM'
+                }, status=500)
+
+            # Parse the Ollama response
+            llm_data = response.json()
+
+            # Return a properly formatted response
+            return JsonResponse({
+                'status': 'success',
+                'message': llm_data['message']['content']
+            })
+
+        except json.JSONDecodeError:
+            return JsonResponse({
+                'status': 'error',
+                'message': 'Invalid JSON in request'
+            }, status=400)
+
+        except requests.exceptions.ConnectionError:
+            return JsonResponse({
+                'status': 'error',
+                'message': 'Could not connect to Ollama. Make sure it is running.'
+            }, status=503)
+
+        except Exception as e:
+            return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+            }, status=500)
+
+    return JsonResponse({
+        'status': 'error',
+        'message': 'Method not allowed'
+    }, status=405)

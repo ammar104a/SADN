@@ -16,6 +16,8 @@ urlpatterns = [
     path('dialer/<int:company_id>/', views.dialer_view, name='dialer_view'),
     path('logout/', views.logout_view, name='logout'),
     path('company/<int:company_id>/comment/', views.add_company_comment, name='add_company_comment'),
-    path('company/<int:company_id>/startcall/', views.start_call_view, name='start_call'),
+    path('start-call/<int:company_id>/', views.start_call, name='start_call'),
+# urls.py
+path('api/llama-chat/', views.llama_chat, name='llama_chat'),
 
 ]

@@ -354,10 +354,44 @@
 
                 <div class="flex justify-between items-center">
 
-                <a href="{% url 'start_call' company.id %}"
-   class="btn-primary px-6 py-3 rounded-lg text-white font-semibold">
-   Start Call
-</a>
+<!-- Replace the existing call button with this -->
+{% if company.phone_number %}
+    <button
+        onclick="startCall({{ company.id }}, '{{ company.phone_number }}')"
+        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-5 rounded">
+        Start Call
+    </button>
+{% else %}
+    <span class="text-gray-500">No phone number available</span>
+{% endif %}
+
+<!-- Add this JavaScript at the bottom of your template -->
+<script>
+function startCall(companyId, phoneNumber) {
+    // First notify the server about call initiation
+    fetch(`/start-call/${companyId}/`, {
+        method: 'GET',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'application/json',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            // After notifying server, initiate the actual call
+            window.location.href = `tel:${phoneNumber}`;
+        } else {
+            alert('Could not initiate call. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error initiating call. Please try again.');
+    });
+}
+</script>
+
 
                         <!-- Previous Company button/link (if exists) -->
                     {% if prev_company %}
