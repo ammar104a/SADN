@@ -3,192 +3,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>SADN | Login</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <title>SADN | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Favicons -->
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="icon">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap CSS File -->
-  <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Libraries CSS Files -->
-  <link rel="stylesheet" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}">
-  <link rel="stylesheet" href="{% static 'lib/animate/animate.min.css' %}">
-  <link rel="stylesheet" href="{% static 'lib/ionicons/css/ionicons.min.css' %}">
-  <link rel="stylesheet" href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}">
-  <link rel="stylesheet" href="{% static 'lib/lightbox/css/lightbox.min.css' %}">
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-    rel="stylesheet"
-  />
+    <style>
+        :root {
+            --primary-color: #280055;
+            --secondary-color: #002051;
+            --bg-gradient: linear-gradient(135deg, #3d007e 0%, #002763 100%);
+        }
 
-  <!-- Main Stylesheet File (Your entire CSS above) -->
-  <!-- Ensure this references the same file or code you showed in the question. -->
-  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            color: #333;
+        }
 
+        .login-container {
+            max-width: 450px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .login-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .login-card-header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .login-card-body {
+            padding: 40px;
+            background: white;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px 15px;
+            border-color: #e0e0e0;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(106, 17, 203, 0.25);
+        }
+
+        .btn-login {
+            background: var(--bg-gradient);
+            border: none;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+        }
+
+        .login-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-
-  <!--==========================
-    Header (Same as your main site)
-  ============================-->
-  <header id="header">
-
-    <div id="topbar">
-      <div class="container">
-      </div>
-    </div>
-
-    <div class="container d-flex justify-content-between align-items-center">
-      <!-- Logo Section -->
-      <div class="logo d-flex align-items-center">
-        <a href="#header" class="scrollto">
-          <img src="{% static 'img/favicon.png' %}" alt="Logo" class="img-fluid me-2" style="max-height: 40px;">
-        </a>
-        <h1 class="text-light m-2">
-          <a href="#intro" class="scrollto"><span>SADN</span></a>
-        </h1>
-      </div>
-      <!-- Navigation Menu -->
-      <nav class="main-nav float-right d-none d-lg-block">
-        <ul>
-          <!-- The active class on the Login link -->
-          <li class="active"><a href="{% url 'login' %}">Login</a></li>
-        </ul>
-      </nav><!-- .main-nav -->
-    </div>
-  </header>
-  <!-- #header -->
-
-  <!--==========================
-    Main content for the Login Page
-  ============================-->
-  <main id="main" class="main-pages">
-
-    <!-- Optional: You can add a nice background or heading here -->
-    <section class="container" style="padding: 120px 0 60px 0;">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8">
-
-          <!-- Login Card/Panel -->
-          <div class="card shadow-sm p-4">
-            <h3 class="text-center mb-4">Welcome Back!</h3>
-
-            <!-- Example Django login form -->
-            <!-- If using Django's built-in authentication with a Form -->
-            <form method="POST" action="{% url 'login' %}">
-              {% csrf_token %}
-              <!-- If using Django form:
-              {{ form.non_field_errors }}
-              <div class="form-group mb-3">
-                  <label for="id_username">Username</label>
-                  {{ form.username }}
-              </div>
-              <div class="form-group mb-3">
-                  <label for="id_password">Password</label>
-                  {{ form.password }}
-              </div>
-              -->
-              <!-- Otherwise, custom fields: -->
-              <div class="form-group mb-3">
-                <label for="username" class="form-label">Username or Email</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="username"
-                  name="username"
-                  required
-                  placeholder="Enter your username"
-                />
-              </div>
-              <div class="form-group mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  name="password"
-                  required
-                  placeholder="Enter your password"
-                />
-              </div>
-
-              <!-- If you have messages or errors (like invalid login), show them here -->
-              {% if messages %}
-                <div class="mb-3 text-danger">
-                  {% for message in messages %}
-                    <p>{{ message }}</p>
-                  {% endfor %}
-                </div>
-              {% endif %}
-
-              <button type="submit" class="btn btn-primary w-100 mt-3">
-                Login
-              </button>
-
-              <div class="text-center mt-3">
-                <p class="mb-1">
-                  <a href="#">Forgot Password?</a>
-                </p>
-                <p>
-                </p>
-              </div>
-            </form>
-          </div><!-- End Card -->
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-  <!-- #main -->
-
-  <!--==========================
-    Footer (Same as your main site)
-  ============================-->
-  <footer id="footer" class="section-bg">
-
-
     <div class="container">
-      <div class="copyright">
-        &copy; 2024, <strong>The Visionary Vault</strong>. All Rights Reserved.
-      </div>
-      <div class="credits">
-        Designed by <a href="https://sadn.uk/"> sadn.uk</a>
-      </div>
+        <div class="login-container">
+            <div class="login-card card">
+                <div class="login-card-header">
+                    <h2 class="mb-0">Welcome Back</h2>
+                    <p class="text-white-50 mb-0">Sign in to continue</p>
+                </div>
+                <div class="login-card-body">
+                    <form method="POST" action="{% url 'login' %}">
+                        {% csrf_token %}
+
+                        <div class="mb-4">
+                            <label for="username" class="form-label">Username or Email</label>
+                            <input type="text" class="form-control" id="username" name="username" required placeholder="Enter your username">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password">
+                        </div>
+
+                        {% if messages %}
+                        <div class="mb-4 text-danger">
+                            {% for message in messages %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <button type="submit" class="btn btn-login w-100">Login</button>
+
+                        <div class="text-center mt-3 login-links">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
-  <!-- #footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-  <!--==========================
-    JavaScript Libraries
-  ============================-->
-  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
-  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-  <script src="{% static 'lib/mobile-nav/mobile-nav.js' %}"></script>
-  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-  <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-  <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
-  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
-  <script src="{% static 'js/chat.js' %}"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="{% static 'js/main.js' %}"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="{% static 'contactform/contactform.js' %}"></script>
-
 </body>
 </html>

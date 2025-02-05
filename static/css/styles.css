@@ -1903,3 +1903,86 @@ side-nav li:nth-child(4)::before {
 }
 
 
+
+
+
+
+/* ==========================
+   Login Page Additions
+========================== */
+
+/* Overall container if you want additional layout or override */
+.login-section {
+  /* If you prefer a full-height approach: */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* We'll rely on the main body background (#0c0c0c) */
+}
+
+/* Style the card to match your dark theme */
+.login-section .card {
+  background-color: #1c1c1c; /* Slightly lighter black/gray */
+  border: none;             /* Remove default card border */
+  box-shadow: 0 0 30px 0 rgba(0,0,0,0.75);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Headings inside the card */
+.login-section .card h3 {
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+}
+
+/* Labels and form text */
+.login-section label {
+  color: #aaa;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+/* Inputs in the dark theme */
+.login-section .form-control {
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 0;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.login-section .form-control:focus {
+  background-color: #0c0c0c;
+  border-color: #ac7edc;       /* Purple accent on focus */
+  box-shadow: none;           /* Remove default Bootstrap focus outline */
+}
+
+/* Login button with your brand color (#ac7edc) */
+.login-section .btn-primary {
+  background-color: #ac7edc;
+  border-color: #ac7edc;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-section .btn-primary:hover {
+  background-color: #974cd1; /* Slightly darker purple on hover */
+  border-color: #974cd1;
+}
+
+/* Links (e.g., “Forgot Password?”) */
+.login-section a {
+  color: #ac7edc;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.login-section a:hover {
+  color: #fff;
+}
