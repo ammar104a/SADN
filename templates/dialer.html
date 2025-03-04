@@ -417,6 +417,51 @@ function startCall(companyId, phoneNumber) {
                     {% endif %}
                 </div>
             </div>
+            <!-- New Embeddable Phone Section -->
+<div class="mt-8">
+    <!-- Optionally include Bootstrap CSS if needed (beware of potential conflicts with Tailwind) -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="https://assets-developers.ringcentral.com/dpw/api-reference/specs/api-quick-start/embeddable-phone-mini.png" class="d-block mx-lg-auto img-fluid" alt="Embeddable Phone" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Embed a phone in seconds</h1>
+                <p class="lead">RingCentral Embeddable empowers developers to enhance any application with a fully functional communications client that can make and receive phone calls, send and receive SMS, schedule meetings, and more. It is fully extensible too.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="https://ringcentral.github.io/ringcentral-embeddable/" class="btn btn-primary btn-lg px-4 me-md-2">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function() {
+            // Using credentials passed into the template context
+            var rcConfig = {
+                clientId: "{{ RC_CLIENT_ID }}",
+                clientSecret: "{{ RC_CLIENT_SECRET }}",
+                server: "{{ RC_SERVER }}",
+                redirectURI: "{{ RC_REDIRECT_URI }}"
+            };
+            var rcs = document.createElement("script");
+            rcs.src = "https://apps.ringcentral.com/integration/ringcentral-embeddable/2.x/adapter.js";
+            rcs.onload = function() {
+                if (typeof RingCentralEmbeddable !== "undefined") {
+                    RingCentralEmbeddable.init({
+                        clientId: rcConfig.clientId,
+                        clientSecret: rcConfig.clientSecret,
+                        server: rcConfig.server,
+                        redirectURI: rcConfig.redirectURI
+                    });
+                }
+            };
+            var rcs0 = document.getElementsByTagName("script")[0];
+            rcs0.parentNode.insertBefore(rcs, rcs0);
+        })();
+    </script>
+</div>
+
         </div>
     </div>
 <!-- dashboard.html -->
